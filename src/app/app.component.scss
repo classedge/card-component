@@ -1,0 +1,55 @@
+.maincontainer:nth-of-type(odd) {
+    background: #e0e0e0;
+}
+
+.maincontainer:not(:first-child){
+    margin-top: var(--cardMargin);
+    position: relative;
+}
+
+.card{
+    height: 100%;
+}
+
+.maincontainer{
+    //height: 400px;
+    height: 90px;
+    overflow: hidden;
+}
+
+.maincontainer:last-child{
+    height: 200px;
+    overflow: scroll;
+}
+.stackContainer{
+    height: 20px;
+    overflow: hidden;
+}
+
+.viewcontainer{
+   // height: 350px;
+  //  background: black;
+    position: relative;
+    top: -5px;
+}
+
+.stackModal{
+    height: 440px;
+    overflow: scroll;
+}
+
+.stakemainContainer{
+    padding-top: 5px;
+    //height: 70px;
+    //overflow: scroll;
+}
+
+.nonStakemainContainer{
+    height: 430px;
+    overflow: scroll;
+}
+
+.skachView{
+    height: 450px;
+    overflow: scroll;
+}

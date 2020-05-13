@@ -1,0 +1,32 @@
+<div class="col-md-6 col-md-offset-3">
+  <h1>Home</h1>
+  <button (click)="openModal('custom-modal-1')">Open Modal 1</button>
+</div>
+
+<app-modal-view id="custom-modal-1">
+  <div class="modal">
+    <div class="modal-container">
+      <div class="modal-head">
+        <h1 class="modal-title">A Custom Modal!</h1>
+        <button (click)="closeModal('custom-modal-1');" class="modal-close">Close</button>
+      </div>
+      <div class="modal-body" [ngClass]="selectedCartData?'skachView':'stackModal'">
+        <div class="viewcontainer" *ngIf="selectedCartData" [@slideInOut] = 'selectedCartData'>
+         <app-card-view [cardData] = "selectedCartData" [currentState]="'stackView'" (getSelectedData) = "selectedData($event)"></app-card-view>
+        </div>
+        <div [ngClass]="selectedCartData?'stakemainContainer':'nonStakemainContainer'">
+          <div [ngClass]="!selectedCartData?'maincontainer':selectedCartData.id != x.id?'stackContainer':''" *ngFor="let x of cardList; let i= index" [ngStyle]="{'background':x.color}" [@listView]="selectedCartData && selectedCartData.id == x.id?'out':!selectedCartData?'out':helpMenuOpen">
+             <div *ngIf= "x.name != selectedDataName" style="height: 100%;">
+            <app-card-view [cardData] = "x" (getSelectedData) = "selectedData($event)"></app-card-view>
+  
+          </div>
+          </div>
+         
+        </div>
+       
+      </div>
+    </div>
+     
+  </div>
+  <div class="modal-background"></div>
+</app-modal-view>

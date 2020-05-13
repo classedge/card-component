@@ -1,0 +1,9 @@
+<div class="card" [ngStyle]="{'background-color':cardData.color}" (click)="showCurrentNotification($event,cardData);closeCurrentCart($event)">
+    <div class="container">
+      <h4><b>{{cardData?.name}}</b></h4>
+      <p class="pContainer" [ngClass]="currentState === 'stackView'?'containerview':''">{{cardData?.department}}</p>
+    </div>
+    <div *ngIf="currentState === 'stackView'">
+        <button (click)="checkPopUp($event)">click me</button>
+    </div>
+  </div>
