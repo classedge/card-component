@@ -1,7 +1,9 @@
 .card {
     /* Add shadows to create the "card" effect */
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    // box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
+    background: none!important;
+    h4{ padding: 0; margin: 0; font-size: 14px; }
    // height: 100%;
     //overflow: scroll;
 
@@ -17,9 +19,16 @@
   
   /* Add some padding inside the card container */
   .container {
-    padding: 2px 16px;
-    //height: 346px;
-    //overflow: scroll;
+    border-radius: 25px 25px 0 0;
+    margin:0;
+    padding: 20px;
+    font-weight: 300;
+    min-height: 150px;
+    background: #F2F6F9;
+    color: #202020;
+    box-shadow: 0 0 35px rgba(0,0,0,0.1);
+    border: 1px solid #D6E5F1;
+    font-size: 14px;
   }
 
 
